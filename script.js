@@ -120,3 +120,45 @@ function insertAfter(event) {
     parentNode.insertBefore(stCard, lastCard.nextSibling);
 }
 btnSwitchInver.addEventListener("click", insertAfter);
+
+//Fonctionnalité 9 :
+//indice 1 : L'event à utiliser est "keypress", appliqué au texte "JS & Events" (ou, mieux, à une div le contenant).
+//Indice 2 : Pour modifier le rendu visuel de toute la page, il faut que tu joues avec les classes de <body>.
+//Indice 3 : Pour mettre tout sur 4 colonnes, rajoute la classe col-4. Pour les placer au milieu ou à droite, rajoute la classe offset-md-4 ou offset-md-8.
+//Indice 4 : Pour éviter que les classes s'accumulent, et pour que chaque touche ait un comportement propre, retire toutes les classes du <body> à chaque fois 
+//qu'un "keypress" est détecté. Ensuite seulement tu rajoutes les classes nécessaires.
+
+let logo = document.querySelector('.navbar-brand');
+
+function keyCases(event) {
+    let bodyCol = document.getElementsByTagName('body')[0];
+    let keyCodec = event.keyCode;
+    console.log(`${keyCodec}`);
+     
+    switch (keyCodec) {
+    case 97:
+        bodyCol.className = '';
+        bodyCol.classList.add('col-4');
+        break;
+    case 121:
+            bodyCol.className = '';
+            bodyCol.classList.add('col-4');
+            bodyCol.classList.add('offset-md-4');
+            break;
+    case 112:
+            bodyCol.className = '';
+            bodyCol.classList.add('col-4');
+            bodyCol.classList.add('offset-md-8');
+            break;
+    case 98:
+            bodyCol.className = '';
+
+    default:
+        console.log("Cette entrée acceptee sont a,y,p et b");
+        break;
+    };
+};
+
+logo.addEventListener("keypress", keyCases, false);
+
+
