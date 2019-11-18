@@ -1,51 +1,45 @@
 //Fonctionnalité 1 :
-let footer = document.getElementsByTagName('footer')[0];
-
-let onButtonClick = function(){
+document.getElementsByTagName('footer')[0].addEventListener("click", function(){
     console.log("clique");
-};
-footer.addEventListener("click", onButtonClick);
+});
 
 //Fonctionnalité 1-bis :
 let numbClick = 1;
-let onButtonClickNb = function(){
-    console.log(`clique ${numbClick}`);
+document.getElementsByTagName('footer')[0].addEventListener("click", function(){
+    console.log(`clique numero ${numbClick}`);
     numbClick += 1;
-};
-footer.addEventListener("click", onButtonClickNb);
+});
 
 //Fonctionnalité 2 :
 let navBtn = document.querySelector('.navbar-toggler');
 let navClass = document.getElementById("navbarHeader")
-let clickBtn = function(){
-    if  (navClass.classList.contains('collapse')){
-        navClass.classList.remove('collapse')
-    }else {
-        navClass.classList.add('collapse')
-    }
-};
-navBtn.addEventListener("click", clickBtn);
+
+navBtn.addEventListener("click", function(){
+    navClass.classList.toggle('collapse')
+});
 
 
 //Fonctionnalité 3 :
 let firstCard = document.querySelector('.col-md-4 .btn-group .btn-outline-secondary');
-let textRed = function(){
+
+firstCard.addEventListener("click", function(){
     firstCard.style.color = "red";
-};
-firstCard.addEventListener("click", textRed);
+});
 
 //Fonctionnalité 4 :
 let secondCard = document.querySelectorAll('.col-md-4 .btn-group .btn-outline-secondary')[1];
-let textGreen = function(){
+
+secondCard.addEventListener("click", function(){
     if (secondCard.style.color != "green"){
         secondCard.style.color = "green";
     }else {
         secondCard.style.color = "gray";
     }
-};
-secondCard.addEventListener("click", textGreen);
+});
 
 //Fonctionnalité 5 :
+//document.styleSheets[0].disabled = false;
+
 let navBar = document.querySelector('.navbar');
 let styleCss = document.getElementsByTagName("link")[0]
 
