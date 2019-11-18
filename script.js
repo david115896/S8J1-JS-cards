@@ -1,14 +1,14 @@
 //Fonctionnalité 1 :
 let footer = document.getElementsByTagName('footer')[0];
 
-var onButtonClick = function(){
+let onButtonClick = function(){
     console.log("clique");
 };
 footer.addEventListener("click", onButtonClick);
 
 //Fonctionnalité 1-bis :
 let numbClick = 1;
-var onButtonClickNb = function(){
+let onButtonClickNb = function(){
     console.log(`clique ${numbClick}`);
     numbClick += 1;
 };
@@ -17,7 +17,7 @@ footer.addEventListener("click", onButtonClickNb);
 //Fonctionnalité 2 :
 let navBtn = document.querySelector('.navbar-toggler');
 let navClass = document.getElementById("navbarHeader")
-var clickBtn = function(){
+let clickBtn = function(){
     if  (navClass.classList.contains('collapse')){
         navClass.classList.remove('collapse')
     }else {
@@ -28,15 +28,15 @@ navBtn.addEventListener("click", clickBtn);
 
 
 //Fonctionnalité 3 :
-var firstCard = document.querySelector('.col-md-4 .btn-group .btn-outline-secondary');
-var textRed = function(){
+let firstCard = document.querySelector('.col-md-4 .btn-group .btn-outline-secondary');
+let textRed = function(){
     firstCard.style.color = "red";
 };
 firstCard.addEventListener("click", textRed);
 
 //Fonctionnalité 4 :
-var secondCard = document.querySelectorAll('.col-md-4 .btn-group .btn-outline-secondary')[1];
-var textGreen = function(){
+let secondCard = document.querySelectorAll('.col-md-4 .btn-group .btn-outline-secondary')[1];
+let textGreen = function(){
     if (secondCard.style.color != "green"){
         secondCard.style.color = "green";
     }else {
@@ -49,7 +49,7 @@ secondCard.addEventListener("click", textGreen);
 let navBar = document.querySelector('.navbar');
 let styleCss = document.getElementsByTagName("link")[0]
 
-var changeCss = function(event){
+let changeCss = function(event){
     if (styleCss.getAttribute('href') != "style.css") {
     styleCss.setAttribute("href", "style.css"); 
     event.stopPropagation(); //stop la methode click
@@ -57,7 +57,7 @@ var changeCss = function(event){
 };
 navBar.addEventListener("dblclick", changeCss);
 
-var changeCss = function(){
+let changeCss = function(){
     if (styleCss.getAttribute('href') == "style.css") {
         styleCss.getAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
     }
@@ -70,7 +70,7 @@ document.addEventListener("dblclick", changeCss);
 // Cette fonction sera réversible : s'il repasse sa souris, la card redevient normale !
 let allCards = document.querySelectorAll('.col-md-4 .btn-group .btn-success');
 
-var overCard = function(){
+let overCard = function(){
     cardThis = this.closest('.col-md-4');
     img = cardThis.getElementsByTagName('img')[0];
     img = cardThis.getElementsByTagName('img')[0];
