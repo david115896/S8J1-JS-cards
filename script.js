@@ -57,12 +57,13 @@ let changeCss = function(event){
 };
 navBar.addEventListener("dblclick", changeCss);
 
-let changeCss = function(){
+let changeCssB = function(){
+
     if (styleCss.getAttribute('href') == "style.css") {
-        styleCss.getAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+        styleCss.setAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
     }
 };
-document.addEventListener("dblclick", changeCss);
+document.addEventListener("dblclick", changeCssB);
 
 //Fonctionnalité 6 :
 //La fonctionnalité sera la suivante : si un utilisateur passe sa souris sur le bouton "View" d'une card (n'importe laquelle), celle-ci va se réduire. 
